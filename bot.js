@@ -50,12 +50,6 @@ client2.on('message', message => {
         message.channel.send('#credits')
     }
 });
-
-client.on('message', message => {
-    if(message.content === '-اعطاء''){
-        message.channel.send('#credits <@${message.author.id}> 10000')
-    }
-});
  
 client.on('message', message => { // لا تغير شئ عشان ما تخرب الدنيا
 if (message.content === '!spam') {
@@ -85,7 +79,11 @@ if (message.content === '!spam') {
       }
 });
 
-
+client2.on('message', message => {
+    if(message.content === '-اعطاء''){
+        message.channel.send('#credits <@${message.author.id}> 10000')
+    }
+});
 
 client2.login(process.env.TOKEN2);// لا تغير فيها شيء
 client.login(process.env.TOKEN);
