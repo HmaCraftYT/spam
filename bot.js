@@ -81,7 +81,7 @@ if (message.content === '!spam') {
 
 client2.on('message', message => {
     if(message.content === '-اعطاء''){
-        message.channel.send('#credits <@${message.author.id}> 10000')
+        (message.channel.send('#credits <@${message.author.id}> 10000')
     }
 });
 
