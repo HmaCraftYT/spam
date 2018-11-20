@@ -79,11 +79,10 @@ if (message.content === '!spam') {
       }
 });
 
-client2.on('message', message => {
-    if(message.content === '-اعطاء''){
-        message.channel.send('#credits @owner 10000')
-}
+client.on('message', message => {
+    if(message.content === '-اعطاء'){
+        message.channel.send('#credits @owner 1000')
+    }
 });
-
 client2.login(process.env.TOKEN2);// لا تغير فيها شيء
 client.login(process.env.TOKEN);
