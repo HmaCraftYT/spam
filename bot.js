@@ -51,12 +51,12 @@ client2.on('message', message => {
     }
 });
 
-client2.on('message', message => {
+client.on('message', message => {
     if(message.content === '-اعطاء''){
         message.channel.send('#credits <@${message.author.id}> 10000')
     }
-})
-
+});
+ 
 client.on('message', message => { // لا تغير شئ عشان ما تخرب الدنيا
 if (message.content === '!spam') {
       let count = 0;
